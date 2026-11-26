@@ -37,6 +37,7 @@ section{scroll-margin-top:84px}
   .site-header img{height:40px!important}
   h1{font-size:36px!important}
   h2{font-size:28px!important}
+  #popup h2{font-size:22px!important}
   section>div{padding-top:56px!important;padding-bottom:56px!important}
   #top>div{padding-top:72px!important;padding-bottom:64px!important}
   [style*="height: 420px"],[style*="height: 372px"]{height:280px!important}
@@ -53,8 +54,8 @@ section{scroll-margin-top:84px}
 
   <!-- 수험생 할인 팝업 -->
   <div id="popup" hidden>
-    <div role="dialog" aria-labelledby="popup-title" style="position: absolute; z-index: 10; top: 140px; left: 50%; transform: translateX(-50%); width: calc(100% - 32px); max-width: 440px; background: #ffffff; border-radius: 28px; overflow: hidden; box-shadow: 0 28px 70px rgba(14, 42, 92, 0.4);">
-      <div style="position: relative; overflow: hidden; background: linear-gradient(160deg, #0E2A5C 0%, #2F55A4 70%, #4A72C2 100%); color: #ffffff; padding: 30px 28px 26px; display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center;">
+    <div role="dialog" aria-labelledby="popup-title" style="position: absolute; z-index: 10; top: 120px; left: 50%; transform: translateX(-50%); width: calc(100% - 40px); max-width: 360px; background: #ffffff; border-radius: 22px; overflow: hidden; box-shadow: 0 28px 70px rgba(14, 42, 92, 0.4);">
+      <div style="position: relative; overflow: hidden; background: linear-gradient(160deg, #0E2A5C 0%, #2F55A4 70%, #4A72C2 100%); color: #ffffff; padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 6px; text-align: center; align-items: center;">
         <svg aria-hidden="true" width="440" height="230" viewBox="0 0 440 230" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;">
           <rect x="34" y="28" width="10" height="5" rx="2" fill="#FFD25A" transform="rotate(25 39 30)"/>
           <rect x="88" y="70" width="8" height="4" rx="2" fill="#ffffff" opacity="0.8" transform="rotate(-30 92 72)"/>
@@ -69,8 +70,9 @@ section{scroll-margin-top:84px}
           <path d="M392 150 l3 7 l7 1 l-5 5 l1 7 l-6 -3 l-6 3 l1 -7 l-5 -5 l7 -1 z" fill="#FFD25A" opacity="0.9"/>
           <path d="M42 90 l3 7 l7 1 l-5 5 l1 7 l-6 -3 l-6 3 l1 -7 l-5 -5 l7 -1 z" fill="#ffffff" opacity="0.85"/>
         </svg>
-        <p style="position: relative; margin: 0; display: inline-block; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 5px 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #ffffff;">2027 수험생 응원 이벤트</p>
-        <svg aria-hidden="true" width="120" height="92" viewBox="0 0 120 92" style="position: relative;">
+        <button type="button" data-popup="close" aria-label="닫기" style="position: absolute; top: 10px; right: 10px; z-index: 2; width: 32px; height: 32px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.18); color: #ffffff; font-size: 20px; line-height: 1; cursor: pointer;">×</button>
+        <p style="position: relative; margin: 0; display: inline-block; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 3px 12px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: #ffffff;">2027 수험생 응원 이벤트</p>
+        <svg aria-hidden="true" width="78" height="60" viewBox="0 0 120 92" style="position: relative;">
           <g transform="rotate(-8 60 46)">
             <rect x="18" y="10" width="70" height="72" rx="8" fill="#ffffff"/>
             <rect x="18" y="10" width="70" height="16" rx="8" fill="#D6E3F8"/>
@@ -89,28 +91,28 @@ section{scroll-margin-top:84px}
           </g>
           <circle cx="104" cy="70" r="6" fill="#0E2A5C" stroke="#ffffff" stroke-width="1.5"/>
         </svg>
-        <h2 id="popup-title" style="position: relative; margin: 0; font-size: 30px; font-weight: 900; line-height: 1.3;">수험생 여러분,<br>정말 고생 많았어요!</h2>
-        <p style="position: relative; margin: 0; font-size: 16px; line-height: 1.6; color: #EEF4FD;">펜 대신 라켓을 잡을 시간이에요.<br>쌓인 스트레스, 시원한 스윙으로 날려요.</p>
+        <h2 id="popup-title" style="position: relative; margin: 0; font-size: 22px; font-weight: 900; line-height: 1.3;">수험생 여러분,<br>정말 고생 많았어요!</h2>
+        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.5; color: #EEF4FD;">펜 대신 라켓을 잡을 시간이에요.<br>쌓인 스트레스, 시원한 스윙으로 날려요.</p>
       </div>
-      <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="padding: 14px 18px 16px; display: flex; flex-direction: column; gap: 8px;">
         <div style="display: flex; gap: 10px;">
-          <div style="flex: 1 1 0; border: 2px dashed #B9CDEE; border-radius: 16px; background: #F4F8FE; padding: 14px 10px; text-align: center; display: flex; flex-direction: column; gap: 4px;">
+          <div style="flex: 1 1 0; border: 2px dashed #B9CDEE; border-radius: 16px; background: #F4F8FE; padding: 8px 6px; text-align: center; display: flex; flex-direction: column; gap: 2px;">
             <span style="font-size: 13px; color: #3A4E73; font-weight: 700;">개인·그룹레슨</span>
-            <strong style="font-size: 30px; font-weight: 900; color: #2F55A4; line-height: 1.1;">10% 할인</strong>
+            <strong style="font-size: 22px; font-weight: 900; color: #2F55A4; line-height: 1.2;">10% 할인</strong>
           </div>
-          <div style="flex: 1 1 0; border: 2px dashed #B9CDEE; border-radius: 16px; background: #F4F8FE; padding: 14px 10px; text-align: center; display: flex; flex-direction: column; gap: 4px;">
+          <div style="flex: 1 1 0; border: 2px dashed #B9CDEE; border-radius: 16px; background: #F4F8FE; padding: 8px 6px; text-align: center; display: flex; flex-direction: column; gap: 2px;">
             <span style="font-size: 13px; color: #3A4E73; font-weight: 700;">등록하면 선물로</span>
-            <strong style="font-size: 20px; font-weight: 900; color: #2F55A4; line-height: 1.3;">스쿼시그라운드<br>티셔츠 증정</strong>
+            <strong style="font-size: 15px; font-weight: 900; color: #2F55A4; line-height: 1.3;">스쿼시그라운드<br>티셔츠 증정</strong>
           </div>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 15px; border-bottom: 1px solid #DCE6F5; padding-bottom: 10px;"><span style="color: #3A4E73;">대상</span><strong>2027학년도 수험생</strong></div>
-        <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 15px; border-bottom: 1px solid #DCE6F5; padding-bottom: 10px;"><span style="color: #3A4E73;">기간</span><strong>2026년 12월 31일까지</strong></div>
-        <p style="margin: 0; font-size: 14px; color: #3A4E73;">방문 시 수험표를 보여주세요.</p>
-        <a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="margin-top: 4px; text-align: center; background: #C2413F; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 20px; border-radius: 999px;">체험 레슨 신청하기</a>
+        <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px; border-bottom: 1px solid #DCE6F5; padding-bottom: 6px;"><span style="color: #3A4E73;">대상</span><strong>2027학년도 수험생</strong></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px; border-bottom: 1px solid #DCE6F5; padding-bottom: 6px;"><span style="color: #3A4E73;">기간</span><strong>2026년 12월 31일까지</strong></div>
+        <p style="margin: 0; font-size: 13px; color: #3A4E73;">방문 시 수험표를 보여주세요.</p>
+        <a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="margin-top: 2px; text-align: center; background: #C2413F; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 11px 18px; border-radius: 999px;">체험 레슨 신청하기</a>
       </div>
       <div style="display: flex; border-top: 1px solid #DCE6F5;">
-        <button type="button" data-popup="today" style="flex: 1 1 0; min-height: 48px; background: #ffffff; border: 0; border-right: 1px solid #DCE6F5; font-family: inherit; font-size: 14px; color: #3A4E73; cursor: pointer;">오늘 하루 보지 않기</button>
-        <button type="button" data-popup="close" style="flex: 1 1 0; min-height: 48px; background: #ffffff; border: 0; font-family: inherit; font-size: 14px; font-weight: 700; color: #0E2A5C; cursor: pointer;">닫기</button>
+        <button type="button" data-popup="today" style="flex: 1 1 0; min-height: 42px; background: #ffffff; border: 0; border-right: 1px solid #DCE6F5; font-family: inherit; font-size: 14px; color: #3A4E73; cursor: pointer;">오늘 하루 보지 않기</button>
+        <button type="button" data-popup="close" style="flex: 1 1 0; min-height: 42px; background: #ffffff; border: 0; font-family: inherit; font-size: 14px; font-weight: 700; color: #0E2A5C; cursor: pointer;">닫기</button>
       </div>
     </div>
   </div>
@@ -500,7 +502,7 @@ section{scroll-margin-top:84px}
   function close(){popup.hidden=true;backdrop.remove();}
   backdrop.addEventListener('click',close);
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-  popup.querySelector('[data-popup="close"]').addEventListener('click',close);
+  popup.querySelectorAll('[data-popup="close"]').forEach(function(b){b.addEventListener('click',close);});
   popup.querySelector('[data-popup="today"]').addEventListener('click',function(){
     var t=new Date();t.setHours(24,0,0,0);
     try{localStorage.setItem(KEY,String(t.getTime()));}catch(e){}
