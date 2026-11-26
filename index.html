@@ -1,206 +1,512 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>스쿼시그라운드 | SQUASH GROUND</title>
-<meta name="description" content="스쿼시그라운드 - 초보부터 선수까지, 누구나 즐기는 스쿼시 전문 코트">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>스쿼시그라운드 | 광진구 스쿼시 · 구의역 스쿼시 레슨</title>
+<meta name="description" content="광진구 유일의 정식 규격 스쿼시장 스쿼시그라운드. 구의역·강변역 도보 8분. 실력별 소규모 그룹레슨, 맞춤형 개인레슨, 청소년 스쿼시, 스쿼시 유학 준비, 코트 대관.">
+<meta name="keywords" content="광진구 스쿼시, 구의역 스쿼시, 강변역 스쿼시, 건대 스쿼시, 스쿼시 레슨, 스쿼시 개인레슨, 청소년 스쿼시, 스쿼시 대관, 광진구 운동, 청소년운동, 스쿼시유학, 광장동 운동">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="스쿼시그라운드">
+<meta property="og:title" content="스쿼시그라운드 | 광진구 스쿼시 레슨 센터">
+<meta property="og:description" content="오늘의 첫 스윙이, 내일의 취미가 되도록. 현역 선수가 코치로 있는 광진구 대표 스쿼시장.">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:locale" content="ko_KR">
+<meta name="theme-color" content="#0E2A5C">
+<link rel="icon" href="images/logo-transparent.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"스쿼시그라운드","telephone":"+82-507-1492-0765","address":{"@type":"PostalAddress","streetAddress":"아차산로 459","addressLocality":"광진구","addressRegion":"서울","addressCountry":"KR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"16:00","closes":"22:00"}],"sameAs":["https://www.instagram.com/squashground/","https://naver.me/x3HdY9GS","https://blog.naver.com/sqsground"]}
+</script>
 <style>
-  :root{
-    --ink:#0f1115; --paper:#f6f4ef; --accent:#d7ff3a; --line:#e2dfd6; --muted:#6b6f78;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:'Noto Sans KR',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-
-  /* 상단 메뉴 */
-  header{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.92);backdrop-filter:blur(8px)}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .logo{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:#fff}
-  .logo span{color:var(--accent)}
-  nav a{color:#cfd2d8;margin-left:28px;font-size:15px;font-weight:500}
-  nav a:hover{color:var(--accent)}
-  .menu-btn{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
-
-  /* 메인 화면 */
-  .hero{background:var(--ink);color:#fff;padding:120px 0 110px;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;
-    border:60px solid var(--accent);opacity:.12}
-  .hero small{color:var(--accent);font-weight:700;letter-spacing:3px}
-  .hero h1{font-family:'Bebas Neue','Noto Sans KR',sans-serif;font-size:clamp(56px,10vw,120px);line-height:.95;margin:16px 0 24px;letter-spacing:2px}
-  .hero p{max-width:520px;color:#c4c7ce;font-size:18px}
-  .btns{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700}
-  .btn-main{background:var(--accent);color:var(--ink)}
-  .btn-line{border:1px solid #4a4e57;color:#fff}
-  .btn:hover{transform:translateY(-2px);transition:.2s}
-
-  section{padding:96px 0}
-  .title small{color:var(--muted);font-weight:700;letter-spacing:3px;font-size:13px}
-  .title h2{font-size:clamp(28px,4vw,40px);font-weight:900;margin:8px 0 40px}
-
-  /* 소개 */
-  .about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px}
-  .stat b{font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1;display:block}
-  .stat span{color:var(--muted)}
-
-  /* 프로그램 */
-  .programs{background:#fff}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .card{border:1px solid var(--line);border-radius:20px;padding:32px;background:var(--paper)}
-  .card .no{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--muted)}
-  .card h3{font-size:22px;margin:8px 0 12px}
-  .card ul{list-style:none;color:var(--muted);font-size:15px}
-  .card li::before{content:"— "}
-
-  /* 요금 */
-  table{width:100%;border-collapse:collapse;background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
-  th,td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--line)}
-  th{background:var(--ink);color:#fff;font-weight:500}
-  td.price{font-weight:700;text-align:right}
-  .note{color:var(--muted);font-size:14px;margin-top:12px}
-
-  /* 시간 / 오시는 길 */
-  .info{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .box{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px}
-  .box h3{margin-bottom:16px}
-  .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line)}
-  .row:last-child{border:0}
-  .map{margin-top:16px;border-radius:14px;overflow:hidden;background:#eceae3;height:220px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-
-  /* 문의 */
-  .contact{background:var(--ink);color:#fff;text-align:center}
-  .contact .title small{color:var(--accent)}
-  .contact p{color:#c4c7ce}
-
-  footer{background:#08090b;color:#7b7f88;font-size:13px;padding:28px 0;text-align:center}
-
-  @media (max-width:820px){
-    nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--ink);padding:12px 24px}
-    nav.open{display:block}
-    nav a{display:block;margin:12px 0}
-    .menu-btn{display:block}
-    .about-grid,.cards,.info{grid-template-columns:1fr}
-    section{padding:72px 0}
-  }
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#ffffff}
+img,video{max-width:100%}
+a{color:#1F4A99}a:hover{color:#0E2A5C}
+section{scroll-margin-top:84px}
+.site-header{position:sticky;top:0;z-index:20}
+#popup-backdrop{position:fixed;inset:0;background:rgba(14,42,92,.55);z-index:40}
+#popup>div[role=dialog]{position:fixed!important;z-index:41!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;max-height:92vh;overflow:auto}
+.mobile-bar{display:none}
+@media (max-width:860px){
+  .main-nav{order:3;width:100%;flex-wrap:nowrap!important;overflow-x:auto;gap:0 18px!important;white-space:nowrap;font-size:14px!important;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .main-nav::-webkit-scrollbar{display:none}
+  .site-header img{height:40px!important}
+  h1{font-size:36px!important}
+  h2{font-size:28px!important}
+  section>div{padding-top:56px!important;padding-bottom:56px!important}
+  #top>div{padding-top:72px!important;padding-bottom:64px!important}
+  [style*="height: 420px"],[style*="height: 372px"]{height:280px!important}
+  [style*="padding-top: 48px"]{padding-top:0!important}
+  table{font-size:13px}
+  .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#ffffff;border-top:1px solid #DCE6F5;padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px}
+  .mobile-bar a{flex:1 1 0;text-align:center;text-decoration:none;font-weight:700;font-size:15px;padding:12px 6px;border-radius:999px}
+  body{padding-bottom:72px}
+}
 </style>
 </head>
 <body>
+<div style="position: relative; font-family: 'Noto Sans KR', system-ui, sans-serif; color: #0E2A5C; background: #ffffff; word-break: keep-all;">
 
-<header>
-  <div class="wrap">
-    <a href="#" class="logo">SQUASH <span>GROUND</span></a>
-    <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
-    <nav>
-      <a href="#about">소개</a>
-      <a href="#programs">프로그램</a>
-      <a href="#price">이용요금</a>
-      <a href="#info">운영시간·위치</a>
-      <a href="#contact">문의</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <small>SQUASH CLUB</small>
-    <h1>SQUASH<br>GROUND</h1>
-    <p>처음 라켓을 잡는 분부터 대회를 준비하는 분까지.<br>스쿼시그라운드에서 가장 즐거운 운동을 시작하세요.</p>
-    <div class="btns">
-      <a href="#contact" class="btn btn-main">체험 레슨 신청</a>
-      <a href="#price" class="btn btn-line">이용요금 보기</a>
+  <!-- 수험생 할인 팝업 -->
+  <div id="popup" hidden>
+    <div role="dialog" aria-labelledby="popup-title" style="position: absolute; z-index: 10; top: 140px; left: 50%; transform: translateX(-50%); width: calc(100% - 32px); max-width: 440px; background: #ffffff; border-radius: 28px; overflow: hidden; box-shadow: 0 28px 70px rgba(14, 42, 92, 0.4);">
+      <div style="position: relative; overflow: hidden; background: linear-gradient(160deg, #0E2A5C 0%, #2F55A4 70%, #4A72C2 100%); color: #ffffff; padding: 30px 28px 26px; display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center;">
+        <svg aria-hidden="true" width="440" height="230" viewBox="0 0 440 230" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;">
+          <rect x="34" y="28" width="10" height="5" rx="2" fill="#FFD25A" transform="rotate(25 39 30)"/>
+          <rect x="88" y="70" width="8" height="4" rx="2" fill="#ffffff" opacity="0.8" transform="rotate(-30 92 72)"/>
+          <circle cx="60" cy="150" r="4" fill="#E9787A"/>
+          <rect x="370" y="36" width="10" height="5" rx="2" fill="#E9787A" transform="rotate(-20 375 38)"/>
+          <circle cx="400" cy="110" r="4" fill="#FFD25A"/>
+          <rect x="340" y="170" width="9" height="4" rx="2" fill="#ffffff" opacity="0.8" transform="rotate(40 344 172)"/>
+          <path d="M20 200 l6 -10 l6 10 z" fill="#8FB3F0"/>
+          <path d="M408 196 l6 -10 l6 10 z" fill="#8FB3F0"/>
+          <circle cx="130" cy="22" r="3" fill="#ffffff" opacity="0.7"/>
+          <circle cx="310" cy="20" r="3" fill="#FFD25A"/>
+          <path d="M392 150 l3 7 l7 1 l-5 5 l1 7 l-6 -3 l-6 3 l1 -7 l-5 -5 l7 -1 z" fill="#FFD25A" opacity="0.9"/>
+          <path d="M42 90 l3 7 l7 1 l-5 5 l1 7 l-6 -3 l-6 3 l1 -7 l-5 -5 l7 -1 z" fill="#ffffff" opacity="0.85"/>
+        </svg>
+        <p style="position: relative; margin: 0; display: inline-block; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 5px 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #ffffff;">2027 수험생 응원 이벤트</p>
+        <svg aria-hidden="true" width="120" height="92" viewBox="0 0 120 92" style="position: relative;">
+          <g transform="rotate(-8 60 46)">
+            <rect x="18" y="10" width="70" height="72" rx="8" fill="#ffffff"/>
+            <rect x="18" y="10" width="70" height="16" rx="8" fill="#D6E3F8"/>
+            <rect x="18" y="20" width="70" height="6" fill="#D6E3F8"/>
+            <text x="53" y="22" text-anchor="middle" font-size="9" font-weight="800" fill="#0E2A5C" font-family="inherit">수험표</text>
+            <rect x="28" y="34" width="20" height="24" rx="3" fill="#EEF4FD" stroke="#B9CDEE"/>
+            <rect x="54" y="36" width="26" height="4" rx="2" fill="#B9CDEE"/>
+            <rect x="54" y="45" width="22" height="4" rx="2" fill="#B9CDEE"/>
+            <rect x="54" y="54" width="18" height="4" rx="2" fill="#B9CDEE"/>
+            <circle cx="70" cy="68" r="13" fill="none" stroke="#D0605E" stroke-width="2.5"/>
+            <text x="70" y="72" text-anchor="middle" font-size="9" font-weight="900" fill="#D0605E" font-family="inherit">수고</text>
+          </g>
+          <g transform="translate(88 30) rotate(30)">
+            <ellipse cx="0" cy="0" rx="13" ry="17" fill="none" stroke="#FFD25A" stroke-width="3.5"/>
+            <line x1="0" y1="17" x2="0" y2="40" stroke="#FFD25A" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <circle cx="104" cy="70" r="6" fill="#0E2A5C" stroke="#ffffff" stroke-width="1.5"/>
+        </svg>
+        <h2 id="popup-title" style="position: relative; margin: 0; font-size: 30px; font-weight: 900; line-height: 1.3;">수험생 여러분,<br>정말 고생 많았어요!</h2>
+        <p style="position: relative; margin: 0; font-size: 16px; line-height: 1.6; color: #EEF4FD;">펜 대신 라켓을 잡을 시간이에요.<br>쌓인 스트레스, 시원한 스윙으로 날려요.</p>
+      </div>
+      <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; gap: 10px;">
+          <div style="flex: 1 1 0; border: 2px dashed #B9CDEE; border-radius: 16px; background: #F4F8FE; padding: 14px 10px; text-align: center; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 13px; color: #3A4E73; font-weight: 700;">개인·그룹레슨</span>
+            <strong style="font-size: 30px; font-weight: 900; color: #2F55A4; line-height: 1.1;">10% 할인</strong>
+          </div>
+          <div style="flex: 1 1 0; border: 2px dashed #B9CDEE; border-radius: 16px; background: #F4F8FE; padding: 14px 10px; text-align: center; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 13px; color: #3A4E73; font-weight: 700;">등록하면 선물로</span>
+            <strong style="font-size: 20px; font-weight: 900; color: #2F55A4; line-height: 1.3;">스쿼시그라운드<br>티셔츠 증정</strong>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 15px; border-bottom: 1px solid #DCE6F5; padding-bottom: 10px;"><span style="color: #3A4E73;">대상</span><strong>2027학년도 수험생</strong></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 15px; border-bottom: 1px solid #DCE6F5; padding-bottom: 10px;"><span style="color: #3A4E73;">기간</span><strong>2026년 12월 31일까지</strong></div>
+        <p style="margin: 0; font-size: 14px; color: #3A4E73;">방문 시 수험표를 보여주세요.</p>
+        <a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="margin-top: 4px; text-align: center; background: #C2413F; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 20px; border-radius: 999px;">체험 레슨 신청하기</a>
+      </div>
+      <div style="display: flex; border-top: 1px solid #DCE6F5;">
+        <button type="button" data-popup="today" style="flex: 1 1 0; min-height: 48px; background: #ffffff; border: 0; border-right: 1px solid #DCE6F5; font-family: inherit; font-size: 14px; color: #3A4E73; cursor: pointer;">오늘 하루 보지 않기</button>
+        <button type="button" data-popup="close" style="flex: 1 1 0; min-height: 48px; background: #ffffff; border: 0; font-family: inherit; font-size: 14px; font-weight: 700; color: #0E2A5C; cursor: pointer;">닫기</button>
+      </div>
     </div>
   </div>
-</section>
 
-<section id="about">
-  <div class="wrap">
-    <div class="title"><small>ABOUT</small><h2>스쿼시그라운드를 소개합니다</h2></div>
-    <div class="about-grid">
-      <div class="stat"><b>2</b><span>코트 (정식 1면 · 세미 1면)</span></div>
-      <div class="stat"><b>1:1</b><span>맞춤 개인 레슨</span></div>
-      <div class="stat"><b>ALL</b><span>초보부터 선수까지</span></div>
+
+  <!-- 연말 파티 공지 띠 -->
+  <a href="#party" style="display: block; background: #0E2A5C; color: #ffffff; text-align: center; padding: 10px 16px; font-size: 14px; font-weight: 500; text-decoration: none;">12월 12일(토) 스쿼시그라운드 연말 파티 · 회원이라면 누구나 함께해요 →</a>
+
+  <!-- 상단 바 -->
+  <header class="site-header" style="border-bottom: 1px solid #DCE6F5; background: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="#top" aria-label="스쿼시그라운드 홈" style="display: flex; align-items: center;"><img src="images/logo-transparent.png" alt="스쿼시그라운드 로고" style="height: 52px; width: auto; display: block;"></a>
+      <nav class="main-nav" aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 15px; font-weight: 500;">
+        <a href="#about" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">센터 소개</a>
+        <a href="#first" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">처음 오셨나요?</a>
+        <a href="#programs" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">프로그램·가격</a>
+        <a href="#coaches" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">코치</a>
+        <a href="#abroad" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">스쿼시 유학</a>
+        <a href="#gallery" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">갤러리</a>
+        <a href="#contact" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">문의</a>
+        <a href="#location" style="color: #0E2A5C; text-decoration: none; padding: 10px 0;">오시는 길</a>
+      </nav>
+      <a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="background: #C2413F; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 22px; border-radius: 999px;">체험 레슨 신청</a>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="programs" class="programs">
-  <div class="wrap">
-    <div class="title"><small>PROGRAMS</small><h2>프로그램</h2></div>
-    <div class="cards">
-      <div class="card">
-        <div class="no">01</div><h3>개인 레슨</h3>
-        <ul><li>코치와 1:1 맞춤 지도</li><li>기초 자세부터 경기 운영까지</li><li>입문자 체험 레슨 가능</li></ul>
-      </div>
-      <div class="card">
-        <div class="no">02</div><h3>그룹 레슨</h3>
-        <ul><li>소수 정원 그룹 수업</li><li>함께 배우는 즐거움</li><li>평일 저녁·주말 반 운영</li></ul>
-      </div>
-      <div class="card">
-        <div class="no">03</div><h3>코트 대여 · 자유 이용</h3>
-        <ul><li>시간 단위 코트 예약</li><li>회원 자유 이용</li><li>동호회·모임 대관 상담</li></ul>
+  <!-- 히어로 -->
+  <section id="top" style="position: relative; background: #0E2A5C; overflow: hidden;">
+    <img loading="lazy" src="images/hero.jpg" alt="파란 유리벽과 빨간 라인의 스쿼시그라운드 코트" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45;">
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 120px 24px 110px; display: flex; flex-direction: column; gap: 24px; color: #ffffff;">
+      <p style="margin: 0; font-size: 16px; font-weight: 700; letter-spacing: 0.04em; color: #BFD3F5;">광진구 유일의 스쿼시장 · 정식 규격 블루 유리코트</p>
+      <h1 style="margin: 0; font-size: 60px; line-height: 1.2; font-weight: 900; max-width: 760px;">오늘의 첫 스윙이,<br>내일의 취미가 되도록.</h1>
+      <p style="margin: 0; font-size: 19px; line-height: 1.7; max-width: 600px; color: #E6EEFB;">현역 선수가 코치로 있는 광진구 대표 스쿼시장.<br>처음이어도 괜찮아요.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+        <a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="background: #C2413F; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; padding: 16px 28px; border-radius: 999px;">체험 레슨 신청</a>
+        <a href="#programs" style="background: #ffffff; color: #0E2A5C; text-decoration: none; font-weight: 700; font-size: 17px; padding: 16px 28px; border-radius: 999px;">프로그램·가격 보기</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="price">
-  <div class="wrap">
-    <div class="title"><small>PRICE</small><h2>이용요금</h2></div>
-    <table>
-      <tr><th>구분</th><th>내용</th><th style="text-align:right">요금</th></tr>
-      <tr><td>체험 레슨</td><td>1회</td><td class="price">50,000원</td></tr>
-    </table>
-    <h3 style="margin:40px 0 16px">개인 레슨</h3>
-    <table>
-      <tr><th>횟수</th><th>기간</th><th style="text-align:right">요금</th></tr>
-      <tr><td>주 1회</td><td>1개월 (4회)</td><td class="price">[금액]원</td></tr>
-      <tr><td>주 2회</td><td>1개월 (8회)</td><td class="price">[금액]원</td></tr>
-      <tr><td>주 3회</td><td>1개월 (12회)</td><td class="price">[금액]원</td></tr>
-    </table>
-    <p class="note">※ 자세한 요금과 일정은 전화로 문의해 주세요.</p>
-  </div>
-</section>
-
-<section id="info" style="background:#fff">
-  <div class="wrap">
-    <div class="title"><small>INFO</small><h2>운영시간 · 오시는 길</h2></div>
-    <div class="info">
-      <div class="box">
-        <h3>운영시간</h3>
-        <div class="row"><span>월 ~ 금</span><b>16:00 ~ 22:00</b></div>
-        <div class="row"><span>토 · 일</span><b>10:00 ~ 22:00</b></div>
+  <!-- 강점 3가지 -->
+  <section id="about" style="background: #EEF4FD;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">WHY SQUASH GROUND</p>
+        <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">취미부터 시합까지,<br>스쿼시 전문 레슨 센터</h2>
       </div>
-      <div class="box">
-        <h3>오시는 길</h3>
-        <p><b>서울 광진구 아차산로 459, 지하 1층</b></p>
-        <div class="btns" style="margin-top:16px">
-          <a href="https://map.naver.com/p/search/서울 광진구 아차산로 459" target="_blank" class="btn btn-main">네이버 지도</a>
-          <a href="https://map.kakao.com/?q=서울 광진구 아차산로 459" target="_blank" class="btn" style="border:1px solid var(--line)">카카오맵</a>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 calc(50% - 10px); min-width: 260px; box-sizing: border-box; background: #ffffff; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 40px; font-weight: 900; color: #2F55A4;">01</p>
+          <h3 style="margin: 0; font-size: 22px; font-weight: 700;">실력별 소규모 그룹레슨</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3A4E73;">실력에 따라 반을 나누고, 한 반은 5명 이내. 입문부터 시합 준비까지 단계별로 올라가요.</p>
+        </div>
+        <div style="flex: 1 1 calc(50% - 10px); min-width: 260px; box-sizing: border-box; background: #ffffff; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 40px; font-weight: 900; color: #2F55A4;">02</p>
+          <h3 style="margin: 0; font-size: 22px; font-weight: 700;">맞춤형 개인레슨</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3A4E73;">오직 나만을 위한 1:1 프라이빗 지도. 내 목표와 실력에 맞춰 코치가 직접 커리큘럼을 짜 드려요.</p>
+        </div>
+        <div style="flex: 1 1 calc(50% - 10px); min-width: 260px; box-sizing: border-box; background: #ffffff; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 40px; font-weight: 900; color: #2F55A4;">03</p>
+          <h3 style="margin: 0; font-size: 22px; font-weight: 700;">매주 금·토 그라운드 나이트</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3A4E73;">회원끼리 자유롭게 치는 저녁. 코치가 주는 오늘의 미션으로 재밌게 실력이 늘어요.</p>
+        </div>
+        <div style="flex: 1 1 calc(50% - 10px); min-width: 260px; box-sizing: border-box; background: #ffffff; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 40px; font-weight: 900; color: #2F55A4;">04</p>
+          <h3 style="margin: 0; font-size: 22px; font-weight: 700;">아이부터 어른까지</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3A4E73;">청소년 개인레슨, 가족이 함께하는 패밀리레슨 등 원하는 레슨을 골라 들을 수 있어요.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="title"><small>CONTACT</small><h2>상담 및 예약 문의</h2></div>
-    <p>체험 레슨, 회원 등록, 코트 예약 모두 편하게 연락 주세요.</p>
-    <div class="btns" style="justify-content:center">
-      <a href="tel:0507-1492-0765" class="btn btn-main">📞 0507-1492-0765</a>
+  <!-- 처음 오셨나요 -->
+  <section id="first" style="background: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px;">
+      <img loading="lazy" src="images/illust.png" alt="COACH THE ONLY 코치 일러스트" style="flex: 0 1 360px; width: 100%; max-width: 360px; height: auto; border-radius: 20px; background: #ffffff; border: 1px solid #DCE6F5;">
+      <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 20px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">FIRST TIME</p>
+        <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">스쿼시, 처음이세요?</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #3A4E73;">처음 오는 분, 오랜만에 다시 시작하는 분, 같이 칠 사람이 없는 분 모두 환영해요. 체험 레슨에서 라켓 잡는 법부터 차근차근 알려드려요.</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 16px; color: #0E2A5C;">
+          <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="flex: 0 0 auto; width: 24px; height: 24px; border-radius: 999px; background: #2F55A4; color: #ffffff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">1</span>준비물은 실내 운동화와 편한 운동복이면 충분해요.</li>
+          <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="flex: 0 0 auto; width: 24px; height: 24px; border-radius: 999px; background: #2F55A4; color: #ffffff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</span>라켓은 센터에서 빌려드려요.</li>
+          <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="flex: 0 0 auto; width: 24px; height: 24px; border-radius: 999px; background: #2F55A4; color: #ffffff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">3</span>체험 후 맞는 반을 코치와 함께 정해요.</li>
+        </ul>
+        <div><a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="display: inline-block; background: #C2413F; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 26px; border-radius: 999px;">체험 레슨 신청하기</a></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2026 SQUASH GROUND · 스쿼시그라운드 · 서울 광진구 아차산로 459 지하 1층 · 0507-1492-0765
-</footer>
+  <!-- 프로그램·가격 -->
+  <section id="programs" style="background: #0E2A5C; color: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #9FBCEB;">PROGRAMS</p>
+        <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">프로그램·가격</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #D6E3F8;">실력별로 나뉜 그룹레슨으로 시작해, 시합 출전까지 코치가 함께해요.</p>
+      </div>
+      <ol aria-label="레슨 단계" style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 12px;">
+        <li style="flex: 1 1 220px; border: 1px solid #3D5D99; border-radius: 16px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 13px; font-weight: 700; color: #9FBCEB;">STEP 1</span><strong style="font-size: 20px;">체험 레슨</strong><span style="font-size: 15px; line-height: 1.6; color: #D6E3F8;">라켓 잡는 법부터, 실력을 보고 맞는 반을 정해요</span></li>
+        <li style="flex: 1 1 220px; border: 1px solid #3D5D99; border-radius: 16px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 13px; font-weight: 700; color: #9FBCEB;">STEP 2</span><strong style="font-size: 20px;">기본반</strong><span style="font-size: 15px; line-height: 1.6; color: #D6E3F8;">기본 스윙과 풋워크, 랠리가 이어지는 단계</span></li>
+        <li style="flex: 1 1 220px; border: 1px solid #3D5D99; border-radius: 16px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 13px; font-weight: 700; color: #9FBCEB;">STEP 3</span><strong style="font-size: 20px;">심화반</strong><span style="font-size: 15px; line-height: 1.6; color: #D6E3F8;">현역 선수 헤드코치가 대회 출전까지 지원해요</span></li>
+        <li style="flex: 1 1 220px; background: #2F55A4; border: 1px solid #2F55A4; border-radius: 16px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 13px; font-weight: 700; color: #D6E3F8;">STEP 4</span><strong style="font-size: 20px;">그라운드 나이트</strong><span style="font-size: 15px; line-height: 1.6; color: #EEF4FD;">회원들과 함께하는 신나는 운동 시간, 게임 및 자유연습</span></li>
+      </ol>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 340px; background: #ffffff; color: #0E2A5C; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px;">
+          <p style="margin: 0; display: inline-block; align-self: flex-start; background: #EEF4FD; color: #1F4A99; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">가장 인기</p>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700;">소규모 그룹레슨</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">실력별 반 · 주 2회 · 월 8회 이상 · 5명 이내</p>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #DCE6F5; padding-top: 14px;"><span style="font-size: 16px;">1개월</span><strong style="font-size: 24px;">200,000원</strong></div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 16px;">3개월 <span style="color: #1F4A99; font-weight: 700;">50,000원 절약</span></span><strong style="font-size: 24px;">550,000원</strong></div>
+        </div>
+        <div style="flex: 1 1 340px; background: #ffffff; color: #0E2A5C; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700;">개인·듀엣 레슨</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">오직 나만을 위한 프라이빗 맞춤 지도. 실력·체력·목표에 맞춰 구성해요.</p>
+          <p style="margin: 0; display: inline-block; align-self: flex-start; background: #EEF4FD; color: #1F4A99; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">20회부터 보너스 레슨 증정</p>
+          <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+            <thead><tr style="border-bottom: 1px solid #DCE6F5;"><th scope="col" style="text-align: left; padding: 8px 0; color: #3A4E73; font-weight: 500;">패키지</th><th scope="col" style="text-align: right; padding: 8px 0; color: #3A4E73; font-weight: 500;">개인 1:1</th><th scope="col" style="text-align: right; padding: 8px 0; color: #3A4E73; font-weight: 500;">듀엣 2:1</th></tr></thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #DCE6F5;"><th scope="row" style="text-align: left; padding: 10px 0; font-weight: 700;">1회</th><td style="text-align: right; padding: 10px 0;"><strong>100,000원</strong></td><td style="text-align: right; padding: 10px 0;"><strong>100,000원</strong><br><span style="font-size: 12px; color: #3A4E73;">1인 5만 원</span></td></tr>
+              <tr style="border-bottom: 1px solid #DCE6F5;"><th scope="row" style="text-align: left; padding: 10px 0; font-weight: 700;">10회</th><td style="text-align: right; padding: 10px 0;"><strong>회당 88,000원</strong><br><span style="font-size: 12px; color: #3A4E73;">총 880,000원</span></td><td style="text-align: right; padding: 10px 0;"><strong>회당 99,000원</strong><br><span style="font-size: 12px; color: #3A4E73;">총 990,000원</span></td></tr>
+              <tr style="border-bottom: 1px solid #DCE6F5;"><th scope="row" style="text-align: left; padding: 10px 0; font-weight: 700;">20회<br><span style="font-size: 12px; color: #1F4A99;">+2회 보너스</span></th><td style="text-align: right; padding: 10px 0;"><strong>회당 80,000원</strong><br><span style="font-size: 12px; color: #3A4E73;">총 1,760,000원</span></td><td style="text-align: right; padding: 10px 0;"><strong>회당 90,000원</strong><br><span style="font-size: 12px; color: #3A4E73;">총 1,980,000원</span></td></tr>
+              <tr><th scope="row" style="text-align: left; padding: 10px 0; font-weight: 700;">30회<br><span style="font-size: 12px; color: #1F4A99;">+5회 보너스</span></th><td style="text-align: right; padding: 10px 0; color: #1F4A99;"><strong>회당 75,000원</strong><br><span style="font-size: 12px; color: #3A4E73;">총 2,640,000원</span></td><td style="text-align: right; padding: 10px 0; color: #1F4A99;"><strong>회당 85,000원</strong><br><span style="font-size: 12px; color: #3A4E73;">총 2,970,000원</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="flex: 1 1 340px; background: #ffffff; color: #0E2A5C; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700;">청소년 레슨</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">기초 체력부터 신경발달 운동까지, 1:1 운동 과외. 2명 이상은 문의해 주세요.</p>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #DCE6F5; padding-top: 14px;"><span style="font-size: 16px;">1:1 (1개월)</span><strong style="font-size: 24px;">250,000원</strong></div>
+          <p style="margin: 0; font-size: 14px; color: #1F4A99; font-weight: 700;">스포츠강좌이용권 사용 가능</p>
+        </div>
+        <div style="flex: 1 1 340px; background: #ffffff; color: #0E2A5C; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 14px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700;">패밀리 레슨</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">가족 다함께 즐기는 스쿼시. 부모님과 아이가 같은 코트에서 함께 배워요.</p>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #DCE6F5; padding-top: 14px;"><span style="font-size: 16px;">1회</span><strong style="font-size: 24px;">100,000원</strong></div>
+          <p style="margin: 0; font-size: 14px; color: #1F4A99; font-weight: 700;">듀엣 레슨과 같은 가격, 10·20·30회 패키지도 동일</p>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 340px; border: 1px solid #3D5D99; border-radius: 20px; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;"><span style="font-size: 18px; font-weight: 700;">체험 레슨</span><strong style="font-size: 22px;">50,000원</strong></div>
+        <div style="flex: 1 1 340px; border: 1px solid #3D5D99; border-radius: 20px; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;"><span style="font-size: 18px; font-weight: 700;">코트 대관</span><strong style="font-size: 22px;">1시간 40,000원</strong></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- 코치 -->
+  <section id="coaches" style="background: #EEF4FD;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">COACHES</p>
+        <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">코치진 소개</h2>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 460px; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-wrap: wrap;">
+          <img loading="lazy" src="images/coach-kim.jpg" alt="김창하 헤드코치" style="flex: 0 0 220px; width: 220px; height: 280px; object-fit: cover; object-position: top; background: #ffffff;">
+          <div style="flex: 1 1 220px; padding: 28px; display: flex; flex-direction: column; gap: 10px;">
+            <p style="margin: 0; font-size: 14px; font-weight: 700; color: #2F55A4;">스쿼시박사</p>
+            <h3 style="margin: 0; font-size: 24px; font-weight: 700;">김창하 헤드코치</h3>
+            <p style="margin: 0; font-size: 15px; color: #3A4E73;">"스쿼시를 즐겁고 흥미롭게"</p>
+            <ul style="margin: 4px 0 0; padding-left: 18px; font-size: 15px; line-height: 1.7; color: #0E2A5C;">
+              <li>現 강원도 스쿼시 대표 선수 · 지도 경력 12년</li>
+              <li>前 하얏트 호텔 스쿼시 코치</li>
+              <li>前 종로르메이에르 스쿼시 코치</li>
+            </ul>
+            <p style="margin: 0; font-size: 14px; color: #1F4A99; font-weight: 500;">개인레슨 · 심화반(시합 준비) · 엘리트 주니어</p>
+          </div>
+        </div>
+        <div style="flex: 1 1 460px; background: #ffffff; border-radius: 20px; overflow: hidden; display: flex; flex-wrap: wrap;">
+          <img loading="lazy" src="images/coach-oh.jpg" alt="오교원 수석코치" style="flex: 0 0 220px; width: 220px; height: 280px; object-fit: cover; object-position: top; background: #ffffff;">
+          <div style="flex: 1 1 220px; padding: 28px; display: flex; flex-direction: column; gap: 10px;">
+            <p style="margin: 0; font-size: 14px; font-weight: 700; color: #2F55A4;">스쿼시 에이스</p>
+            <h3 style="margin: 0; font-size: 24px; font-weight: 700;">오교원 수석코치</h3>
+            <p style="margin: 0; font-size: 15px; color: #3A4E73;">"스쿼시를 강한 삶의 원동력으로!"</p>
+            <ul style="margin: 4px 0 0; padding-left: 18px; font-size: 15px; line-height: 1.7; color: #0E2A5C;">
+              <li>現 스쿼시 연맹 소속 심판</li>
+              <li>前 라이프 스쿼시 코치</li>
+              <li>前 서울 스쿼시 코치</li>
+            </ul>
+            <p style="margin: 0; font-size: 14px; color: #1F4A99; font-weight: 500;">청소년 개인레슨 · 개인레슨 · 소규모 그룹수업</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 수상 -->
+  <section id="awards" style="background: #0E2A5C; color: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 32px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #9FBCEB;">AWARDS</p>
+          <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">회원들이 증명하는 실력</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #D6E3F8;">취미로 시작한 회원들이 대회 시상대까지. 심화반에서 코치가 대회 출전까지 함께해요.</p>
+        </div>
+        <a href="https://talk.naver.com/profile/wmj732o" target="_blank" rel="noopener" style="background: #ffffff; color: #0E2A5C; text-decoration: none; font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: 999px;">심화반 문의</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        <figure style="margin: 0; flex: 1 1 260px; display: flex; flex-direction: column; gap: 12px;"><img loading="lazy" src="images/aw-guri.jpg" alt="구리시스쿼시연맹회장배 시상식" style="width: 100%; height: 320px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="display: flex; flex-direction: column; gap: 4px;"><strong style="font-size: 17px;">S3 남 1부 우승 · 준우승</strong><span style="font-size: 14px; color: #D6E3F8;">제22회 구리시스쿼시연맹회장배 (2026.11)</span></figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 260px; display: flex; flex-direction: column; gap: 12px;"><img loading="lazy" src="images/aw-hanam.jpg" alt="하남시장기 준우승 기념 사진" style="width: 100%; height: 320px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="display: flex; flex-direction: column; gap: 4px;"><strong style="font-size: 17px;">여자 S4 준우승</strong><span style="font-size: 14px; color: #D6E3F8;">2026 제1회 하남시장기 생활체육 스쿼시대회</span></figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 260px; display: flex; flex-direction: column; gap: 12px;"><img loading="lazy" src="images/aw-seongbuk.jpg" alt="성북구청장배 시상식" style="width: 100%; height: 320px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="display: flex; flex-direction: column; gap: 4px;"><strong style="font-size: 17px;">입상</strong><span style="font-size: 14px; color: #D6E3F8;">성북구청장배 스쿼시대회</span></figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 260px; display: flex; flex-direction: column; gap: 12px;"><img loading="lazy" src="images/aw-national.jpg" alt="전국체육대회 스쿼시 코트에서의 강원도 선수단" style="width: 100%; height: 320px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="display: flex; flex-direction: column; gap: 4px;"><strong style="font-size: 17px;">헤드코치 강원도 대표 출전</strong><span style="font-size: 14px; color: #D6E3F8;">제107회 전국체육대회 스쿼시경기</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 스쿼시 유학 -->
+  <section id="abroad" style="background: #F4F8FE;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+      <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 20px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">SQUASH STUDY ABROAD</p>
+        <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">하버드·스탠퍼드 스쿼시팀<br>유학생도 여기서 칩니다</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #3A4E73;">스쿼시그라운드에는 미국 대학 스쿼시팀에서 뛰는 유학생 회원들이 있어요. 해외 대학 진학을 준비하는 학생도, 방학에 잠깐 들어온 유학생도 같은 코트에서 실력을 이어갈 수 있어요.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+          <div style="flex: 1 1 240px; box-sizing: border-box; background: #ffffff; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px; border: 1px solid #DCE6F5;">
+            <span style="align-self: flex-start; background: #2F55A4; color: #ffffff; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px;">유학 준비생</span>
+            <h3 style="margin: 0; font-size: 20px; font-weight: 700;">주니어 엘리트 1:1 레슨</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">현역 선수 헤드코치가 기본기부터 시합 운영까지 지도하고, 국내 대회 출전으로 경기 경험을 쌓아요.</p>
+          </div>
+          <div style="flex: 1 1 240px; box-sizing: border-box; background: #ffffff; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px; border: 1px solid #DCE6F5;">
+            <span style="align-self: flex-start; background: #0E2A5C; color: #ffffff; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px;">방학 중 유학생</span>
+            <h3 style="margin: 0; font-size: 20px; font-weight: 700;">방학 집중 훈련</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">학기 중 감각을 잃지 않도록 개인레슨과 코트 대관으로 훈련하고, 그라운드 나이트에서 회원들과 게임해요.</p>
+          </div>
+        </div>
+        <div><a href="https://talk.naver.com/profile/wmj732o" target="_blank" rel="noopener" style="display: inline-block; background: #C2413F; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 26px; border-radius: 999px;">스쿼시 유학 상담하기</a></div>
+      </div>
+      <div style="flex: 1 1 420px; display: flex; gap: 16px;">
+        <figure style="margin: 0; flex: 1 1 0; display: flex; flex-direction: column; gap: 8px;"><img loading="lazy" src="images/harvard-team-blur.jpg" alt="미국 대학 스쿼시 코트에서 팀원들과 함께한 유학생 회원" style="width: 100%; height: 420px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="font-size: 14px; color: #3A4E73;">미국 대학 스쿼시팀에서 뛰는 회원</figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 0; display: flex; flex-direction: column; gap: 8px; padding-top: 48px;"><img loading="lazy" src="images/team-shirts.jpg" alt="센터에 걸린 하버드·스탠퍼드 스쿼시팀 셔츠" style="width: 100%; height: 372px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="font-size: 14px; color: #3A4E73;">센터에 걸린 하버드·스탠퍼드 스쿼시팀 셔츠</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 시설 -->
+  <section style="background: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 32px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">FACILITY</p>
+          <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">센터 둘러보기</h2>
+        </div>
+        <p style="margin: 0; font-size: 16px; color: #3A4E73;">블루 유리코트 · 화이트 코트 2면 · 볼머신 · 컨디셔닝존 · 스트링머신 · 프로샵</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        <img loading="lazy" src="images/glass.jpg" alt="유리벽 코트에서 게임하는 회원들" style="flex: 1 1 260px; min-width: 0; height: 320px; object-fit: cover; border-radius: 20px;">
+        <img loading="lazy" src="images/f-white.jpg" alt="화이트 코트와 대여용 라켓 거치대" style="flex: 1 1 260px; min-width: 0; height: 320px; object-fit: cover; border-radius: 20px;">
+        <img loading="lazy" src="images/f-cardio.jpg" alt="커브 트레드밀·로잉머신·실내 사이클이 있는 컨디셔닝존" style="flex: 1 1 260px; min-width: 0; height: 320px; object-fit: cover; border-radius: 20px;">
+        <img loading="lazy" src="images/f-train.jpg" alt="케틀벨·폼롤러·보수볼이 있는 웜업 트레이닝 랙" style="flex: 1 1 260px; min-width: 0; height: 320px; object-fit: cover; border-radius: 20px;">
+        <img loading="lazy" src="images/f-shop.jpg" alt="라켓·스트링·공을 파는 프로샵 벽" style="flex: 1 1 260px; min-width: 0; height: 320px; object-fit: cover; border-radius: 20px;">
+        <img loading="lazy" src="images/f-string.jpg" alt="스트링 교체 머신" style="flex: 1 1 260px; min-width: 0; height: 320px; object-fit: cover; border-radius: 20px;">
+      </div>
+      <div style="background: #EEF4FD; border-radius: 16px; padding: 20px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">
+        <strong style="font-size: 17px;">스트링·범퍼 교체</strong>
+        <span style="font-size: 15px; color: #3A4E73;">2매듭 15,000원 · 4매듭 18,000원 · 범퍼 3,000원 (공임비, 회원 10% 할인)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 갤러리 -->
+  <section id="gallery" style="background: #EEF4FD;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 32px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">GALLERY</p>
+          <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">그라운드의 요즘</h2>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="https://www.instagram.com/squashground/" target="_blank" rel="noopener" style="background: #0E2A5C; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: 999px;">인스타그램에서 더 보기</a>
+          <a href="https://blog.naver.com/sqsground" target="_blank" rel="noopener" style="background: #ffffff; color: #0E2A5C; border: 1px solid #0E2A5C; text-decoration: none; font-weight: 700; font-size: 15px; padding: 13px 22px; border-radius: 999px;">블로그 소식 보기</a>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        <figure style="margin: 0; flex: 1 1 340px; position: relative;"><img loading="lazy" src="images/g-tourney.jpg" alt="전국 대회에 출전한 회원들" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="position: absolute; left: 14px; bottom: 14px; background: #ffffff; color: #0E2A5C; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">대회 출전</figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 340px; position: relative;"><img loading="lazy" src="images/g-game.jpg" alt="코트에서 게임 중인 회원들" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="position: absolute; left: 14px; bottom: 14px; background: #ffffff; color: #0E2A5C; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">그라운드 나이트</figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 340px; position: relative;"><img loading="lazy" src="images/g-group.jpg" alt="그룹레슨에서 연습하는 회원들" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="position: absolute; left: 14px; bottom: 14px; background: #ffffff; color: #0E2A5C; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">그룹레슨</figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 340px; position: relative;"><img loading="lazy" src="images/member-kid-blur.jpg" alt="로고 앞에서 사진을 찍은 코치와 어린이 회원" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="position: absolute; left: 14px; bottom: 14px; background: #ffffff; color: #0E2A5C; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">우리 회원</figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 340px; position: relative;"><video src="images/lesson2.mp4" autoplay muted loop playsinline preload="metadata" aria-label="코치와 함께하는 레슨 영상" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; display: block; background: #0E2A5C;"></video><figcaption style="position: absolute; left: 14px; bottom: 14px; background: #ffffff; color: #0E2A5C; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">레슨</figcaption></figure>
+        <figure style="margin: 0; flex: 1 1 340px; position: relative;"><img loading="lazy" src="images/kids.jpg" alt="아이에게 라켓 잡는 법을 알려주는 코치" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; display: block;"><figcaption style="position: absolute; left: 14px; bottom: 14px; background: #ffffff; color: #0E2A5C; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">키즈 레슨</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 연말 파티 -->
+  <section id="party" style="background: #2F55A4; color: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px;">
+      <img loading="lazy" src="images/party.jpg" alt="코트에 모인 스쿼시그라운드 회원들" style="flex: 1 1 420px; min-width: 0; width: 100%; height: 340px; object-fit: cover; border-radius: 20px;">
+      <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 16px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #D6E3F8;">2026. 12. 12 (토)</p>
+        <h2 style="margin: 0; font-size: 36px; font-weight: 900; line-height: 1.3;">스쿼시그라운드 연말 파티</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #EEF4FD;">체육대회처럼 스쿼시 경기와 레크리에이션을 하고, 파티로 한 해를 마무리해요. 치고, 게임하고, 같이 웃는 연말.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 -->
+  <section id="contact" style="background: #EEF4FD;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 48px;">
+      <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 20px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">CONTACT</p>
+        <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">궁금한 건<br>네이버 톡톡으로 편하게</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #3A4E73;">체험 레슨, 그룹반 시간, 청소년 레슨, 대관까지. 네이버 톡톡으로 남겨주시면 코치가 직접 답해드려요.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="https://talk.naver.com/profile/wmj732o" target="_blank" rel="noopener" style="background: #0E2A5C; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 26px; border-radius: 999px;">네이버 톡톡으로 문의하기</a>
+          <a href="tel:050714920765" style="background: #ffffff; color: #0E2A5C; text-decoration: none; font-weight: 700; font-size: 16px; padding: 16px 26px; border-radius: 999px;">전화 문의</a>
+        </div>
+        <p style="margin: 0; font-size: 14px; color: #3A4E73;">답변 시간: 운영시간 내 [확인 필요]</p>
+      </div>
+      <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 12px;">
+        <h3 style="margin: 0 0 4px; font-size: 20px; font-weight: 700;">자주 묻는 질문</h3>
+        <details style="background: #ffffff; border-radius: 14px; padding: 18px 22px;"><summary style="font-size: 16px; font-weight: 700; cursor: pointer;">처음인데 무엇을 준비해야 하나요?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">실내 운동화와 편한 운동복이면 충분해요. 라켓은 센터에서 빌려드려요.</p></details>
+        <details style="background: #ffffff; border-radius: 14px; padding: 18px 22px;"><summary style="font-size: 16px; font-weight: 700; cursor: pointer;">체험 레슨은 어떻게 신청하나요?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">상단의 체험 레슨 신청 버튼에서 네이버 예약으로 원하는 시간을 고르면 돼요. 체험비는 50,000원이에요.</p></details>
+        <details style="background: #ffffff; border-radius: 14px; padding: 18px 22px;"><summary style="font-size: 16px; font-weight: 700; cursor: pointer;">주차할 수 있나요?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">건물에 주차할 수 있고, 만차일 때는 근처 구의3동 공영주차장을 이용해 주세요.</p></details>
+        <details style="background: #ffffff; border-radius: 14px; padding: 18px 22px;"><summary style="font-size: 16px; font-weight: 700; cursor: pointer;">청소년 바우처(스포츠강좌이용권)를 쓸 수 있나요?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">네, 사용할 수 있어요. 자세한 결제 방법은 네이버 톡톡으로 문의해 주세요.</p></details>
+        <details style="background: #ffffff; border-radius: 14px; padding: 18px 22px;"><summary style="font-size: 16px; font-weight: 700; cursor: pointer;">그라운드 나이트는 누구나 참여할 수 있나요?</summary><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.7; color: #3A4E73;">매주 금·토 저녁 6시~9시, 스쿼시그라운드 회원이라면 누구나 함께할 수 있어요. 신청은 회원용 스튜디오메이트 앱에서 해요.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 오시는 길 -->
+  <section id="location" style="background: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <p style="margin: 0; font-size: 15px; font-weight: 700; color: #2F55A4;">LOCATION</p>
+        <h2 style="margin: 0; font-size: 38px; font-weight: 900; line-height: 1.3;">오시는 길 · 운영시간</h2>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+        <div style="flex: 1 1 480px; min-height: 360px; background: #EEF4FD; border: 2px dashed #9FBCEB; border-radius: 20px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; color: #1F4A99; font-weight: 700;">네이버 지도 영역<br>(서울 광진구 아차산로 459)</div>
+        <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 22px;">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 700;">주소</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3A4E73;">서울특별시 광진구 아차산로 459 (구의동 212-17)</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 700;">교통·주차</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3A4E73;">2호선 구의역·강변역 도보 8분<br>건물 주차 가능, 만차 시 구의3동 공영주차장 이용</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 700;">운영시간</h3>
+            <div style="display: flex; justify-content: space-between; font-size: 16px; color: #3A4E73; border-bottom: 1px solid #DCE6F5; padding-bottom: 8px;"><span>화 ~ 일</span><span>09:00 - 22:00 (휴게 12:00 - 16:00)</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 16px; color: #3A4E73;"><span>월</span><span>16:00 - 22:00</span></div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px;">
+            <a href="tel:050714920765" style="background: #0E2A5C; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 22px; border-radius: 999px;">전화 0507-1492-0765</a>
+            <a href="https://talk.naver.com/profile/wmj732o" target="_blank" rel="noopener" style="background: #EEF4FD; color: #0E2A5C; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 22px; border-radius: 999px;">네이버 톡톡 문의</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer style="background: #0E2A5C; color: #C9D8F2;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <img loading="lazy" src="images/logo-white.png" alt="스쿼시그라운드 로고" style="height: 64px; width: auto; align-self: flex-start;">
+        <p style="margin: 0; font-size: 14px; line-height: 1.7;">서울 광진구 아차산로 459 · 0507-1492-0765</p>
+      </div>
+      <nav aria-label="SNS 채널" style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <a href="https://www.instagram.com/squashground/" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 500; border: 1px solid #3D5D99; padding: 12px 18px; border-radius: 999px;">인스타그램</a>
+        <a href="https://blog.naver.com/sqsground" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 500; border: 1px solid #3D5D99; padding: 12px 18px; border-radius: 999px;">네이버 블로그</a>
+        <a href="https://talk.naver.com/profile/wmj732o" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 500; border: 1px solid #3D5D99; padding: 12px 18px; border-radius: 999px;">네이버 톡톡</a>
+        <a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 500; border: 1px solid #3D5D99; padding: 12px 18px; border-radius: 999px;">네이버 플레이스</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+<nav class="mobile-bar" aria-label="빠른 연결">
+  <a href="tel:050714920765" style="background:#EEF4FD;color:#0E2A5C;">전화</a>
+  <a href="https://talk.naver.com/profile/wmj732o" target="_blank" rel="noopener" style="background:#2F55A4;color:#ffffff;">네이버 톡톡</a>
+  <a href="https://naver.me/x3HdY9GS" target="_blank" rel="noopener" style="background:#C2413F;color:#ffffff;">체험 레슨 신청</a>
+</nav>
+<script>
+(function(){
+  var KEY='sg-popup-hide-until';
+  var EVENT_END=new Date('2027-01-01T00:00:00+09:00');
+  var popup=document.getElementById('popup');
+  if(!popup) return;
+  var hideUntil=0;
+  try{hideUntil=Number(localStorage.getItem(KEY))||0;}catch(e){}
+  if(Date.now()>=EVENT_END.getTime()||Date.now()<hideUntil) return;
+  var backdrop=document.createElement('div');
+  backdrop.id='popup-backdrop';
+  popup.parentNode.insertBefore(backdrop,popup);
+  popup.hidden=false;
+  function close(){popup.hidden=true;backdrop.remove();}
+  backdrop.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  popup.querySelector('[data-popup="close"]').addEventListener('click',close);
+  popup.querySelector('[data-popup="today"]').addEventListener('click',function(){
+    var t=new Date();t.setHours(24,0,0,0);
+    try{localStorage.setItem(KEY,String(t.getTime()));}catch(e){}
+    close();
+  });
+})();
+</script>
 </body>
 </html>
